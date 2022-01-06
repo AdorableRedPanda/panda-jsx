@@ -1,1 +1,1 @@
-export { createJSXNode } from './createJSXNode';
+export { createElement } from './createElement';

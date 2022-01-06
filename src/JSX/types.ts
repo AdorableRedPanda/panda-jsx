@@ -1,6 +1,6 @@
 type DOMTag = keyof HTMLElementTagNameMap;
 
-type FragmentType = 'FRAGMENT';
+type FragmentType = '_fragment';
 
 interface WithChildren {
     children: NodeChild[];
