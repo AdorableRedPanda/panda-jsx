@@ -2,14 +2,14 @@
   "compilerOptions": {
     "sourceMap": true,
     "baseUrl": ".",
-    "noImplicitAny": true,
+    "noImplicitAny": false, // todo: сконфигурировать типизацию jsx
     "module": "commonjs",
     "esModuleInterop": true,
     "target": "es5",
     "lib": ["dom", "es2019"],
     "jsx": "preserve",
     "jsxFactory": "createElement",
-    "jsxFragmentFactory": "createFragment ",
+    "jsxFragmentFactory": "createElement",
     "outDir": "./dist/",
     "allowJs": true,
     "skipLibCheck": true,
