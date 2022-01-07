@@ -14,7 +14,7 @@ export type FC<Props> = ComponentFunction<Props>
 
 export type JSXNodeType<Props> = DOMTag | FragmentType | ComponentFunction<Props>;
 
-export type NodeChild = string | null | JSXNode<unknown>;
+export type NodeChild = string | null | undefined | JSXNode<unknown>;
 
 export interface JSXNode<Props> {
     type: JSXNodeType<Props>;

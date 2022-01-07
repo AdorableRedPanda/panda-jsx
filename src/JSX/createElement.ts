@@ -4,4 +4,4 @@ export const createElement = <Props>(
     type: JSXNodeType<Props>,
     props: Props,
     ...children: NodeChild[]
-): JSXNode<Props> => ({ type, props, children });
+): JSXNode<unknown> => ({ type, props, children });
