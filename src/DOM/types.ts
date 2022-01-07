@@ -1,0 +1,1 @@
+export type DOMHelper<Type> = (value: Type) => HTMLElement | Text;

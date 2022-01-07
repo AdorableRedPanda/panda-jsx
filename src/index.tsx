@@ -1,23 +1,14 @@
+import { render } from './Render';
+import { App } from './components/App';
+
 /** @jsx createElement */
-import { FC, createElement } from './JSX';
-
-interface Props {
-    record: Record<string, string>
-}
-
-const CustomComponent: FC<Props> = ({ record, children }) => (
-    <div>
-        {Object.entries(record).map(([key, value]) => <p className="key">{`${key}: ${value}`}</p>)}
-        {children}
-    </div>
-);
+import { createElement } from './JSX';
 
 (() => {
-    const jsx = (
-        <CustomComponent record={{ hi: 'there' }}>
-            <p className="hi_4">hi 4</p>
-        </CustomComponent>
-    );
+    const $root = document.getElementById('root');
+    if (!$root) {
+        return;
+    }
 
-    console.log('JSX', jsx);
+    render(<App />, $root);
 })();

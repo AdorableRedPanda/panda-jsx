@@ -1,2 +1,2 @@
 export { createElement } from './createElement';
-export type { FC } from './types';
+export type { FC, JSXNode, PropsWithChildren, NodeChild, DOMTag } from './types';

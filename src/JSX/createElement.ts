@@ -1,7 +1,7 @@
 import { JSXNodeType, NodeChild, JSXNode } from './types';
 
-export const createElement = <Props>(
+export const createElement = <Props extends object>(
     type: JSXNodeType<Props>,
     props: Props,
     ...children: NodeChild[]
-): JSXNode<unknown> => ({ type, props, children });
+): JSXNode<Props> => ({ type, props, children });
