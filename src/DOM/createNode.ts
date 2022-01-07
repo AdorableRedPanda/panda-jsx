@@ -1,20 +1,26 @@
-import { VNode } from '../NodesTree/types';
+import { TagNode } from '../Nodes/types';
 import { DOMHelper } from './types';
+import { LeafNode } from '../JSX';
+import { getStringEntries } from './stringifyProps';
 
-const createTextNode: DOMHelper<string> = value => document.createTextNode(value);
+const createTextNode: DOMHelper<LeafNode> = value => document.createTextNode(value.toString());
 
-export const createNode: DOMHelper<VNode> = value => {
-    // todo: добавить обработку пропсов
+const createTagNode: DOMHelper<TagNode> = value => {
     const node = document.createElement(value.tagName);
+    const propsEntries = getStringEntries(value.props || {});
+    console.log(propsEntries);
+    propsEntries.forEach(([attribute, value]) => node.setAttribute(attribute, value));
 
-    const childNodes = value.children.map(child => {
-        if (typeof child === 'string') {
-            return createTextNode(child);
-        }
-        return createNode(child);
-    });
+    const childNodes = value.children.map(createNode);
 
     node.append(...childNodes);
 
     return node;
 };
+
+export function createNode (value: TagNode|LeafNode) {
+    if (typeof value === 'object') {
+        return createTagNode(value);
+    }
+    return createTextNode(value);
+}
