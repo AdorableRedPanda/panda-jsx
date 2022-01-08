@@ -1,7 +1,7 @@
 {
-  "name": "simple-webpack-conf",
+  "name": "react-free-jsx",
   "version": "1.0.0",
-  "description": "Simplest webpack configuration for development, TS and ESLint",
+  "description": "Simple configuration for using JSX without React",
   "main": "index.js",
   "scripts": {
     "build": "webpack -c webpack/common.js --mode=production",
