@@ -8,7 +8,7 @@ interface WithChildren {
 
 // todo: убрать object кругом
 
-export type LeafNode = string | number;
+export type LeafNode = string | number | undefined | false | null;
 
 export type PropsWithChildren<Props> = Props & WithChildren;
 
@@ -18,7 +18,7 @@ export type FC<Props = {}> = ComponentFunction<Props>
 
 export type JSXNodeType<Props> = DOMTag | FragmentType | ComponentFunction<Props>;
 
-export type NodeChild = LeafNode | undefined | JSXNode<object> | false;
+export type NodeChild = LeafNode | JSXNode<object>;
 
 export interface JSXNode<Props extends object> {
     type: JSXNodeType<Props>;

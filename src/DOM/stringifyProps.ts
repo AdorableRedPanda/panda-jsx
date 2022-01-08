@@ -1,4 +1,5 @@
-const allowedPropKeys = ['id', 'className', 'style'];
+// todo: проверять аььрибуты типизацией на этапе написания JSX
+const allowedPropKeys = ['id', 'className', 'style', 'href', 'target'];
 const keysReplacement: Record<string, string> = {
     className: 'class'
 };
