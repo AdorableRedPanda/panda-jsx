@@ -1,15 +1,13 @@
 {
-  "name": "react-free-jsx",
-  "version": "1.0.0",
-  "description": "Simple configuration for using JSX without React",
-  "main": "index.js",
+  "name": "panda-jsx",
+  "version": "0.0.1",
+  "description": "Static JSX without React",
+  "main": "dist/panda-jsx.mjs",
   "scripts": {
-    "build": "webpack -c webpack/common.js --mode=production",
-    "build:prod": "webpack -c webpack/prod.js",
-    "start": "webpack serve -c webpack/dev.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "vite build",
+    "dev": "vite build --watch --mode=dev"
   },
-  "author": "",
+  "author": "AdorableRedPanda",
   "license": "ISC",
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "4.11.0",
@@ -17,17 +15,14 @@
     "eslint": "7.11.0",
     "eslint-loader": "3.0.3",
     "eslint-plugin-import": "2.22.1",
-    "typescript": "4.3.4",
-    "webpack-dev-server": "3.11.2"
+    "vite-plugin-static-copy": "0.11.1",
+    "typescript": "4.3.4"
   },
   "dependencies": {
     "@babel/core": "7.11.6",
     "@babel/preset-typescript": "7.8.3",
     "@babel/plugin-proposal-class-properties": "7.12.13",
     "@babel/preset-react": "7.16.7",
-    "html-webpack-plugin": "5.3.2",
-    "babel-loader": "8.0.6",
-    "webpack": "5.41.1",
-    "webpack-cli": "4.7.2"
+    "vite": "3.2.3"
   }
 }
