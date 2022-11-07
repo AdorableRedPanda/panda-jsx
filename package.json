@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Static JSX without React",
   "main": "dist/panda-jsx.mjs",
+  "keywords": ["jsx", "react-free", "react-free-jsx", "vanilla-jsx"],
   "scripts": {
     "build": "vite build",
     "dev": "vite build --watch --mode=dev"
