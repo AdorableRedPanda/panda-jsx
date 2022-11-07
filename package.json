@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "description": "Static JSX without React",
   "main": "dist/panda-jsx.mjs",
+  "repository": "https://github.com/AdorableRedPanda/panda-jsx",
   "keywords": ["jsx", "react-free", "react-free-jsx", "vanilla-jsx"],
   "scripts": {
     "build": "vite build",
