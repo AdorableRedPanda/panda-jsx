@@ -1,6 +1,6 @@
 {
   "name": "panda-jsx",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Static JSX without React",
   "main": "dist/panda-jsx.mjs",
   "repository": "https://github.com/AdorableRedPanda/panda-jsx",
