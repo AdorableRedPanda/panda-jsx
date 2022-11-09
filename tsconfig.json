@@ -3,7 +3,7 @@
     "sourceMap": true,
     "baseUrl": ".",
     "noImplicitAny": true,
-    "module": "commonjs",
+    "module": "umd",
     "esModuleInterop": true,
     "target": "es5",
     "lib": ["dom", "es2019"],

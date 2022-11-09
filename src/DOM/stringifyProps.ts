@@ -20,5 +20,7 @@ const stringifyAttributeValue = (value: Record<string, string> | string): string
 export const getStringEntries = (props: object): [string, string][] => {
     const keys = Object.keys(props).filter(isAllowedAttribute);
 
+    // todo: specify props type
+    // @ts-ignore
     return keys.map(key => [keysReplacement[key] || key, stringifyAttributeValue(props[key])]);
 };
