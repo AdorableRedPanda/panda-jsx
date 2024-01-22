@@ -2,7 +2,6 @@ import { defineConfig } from 'vite';
 
 export default defineConfig(({ mode, ...rest }) => {
     const isDev =  mode === 'dev';
-    console.log(mode, rest)
     return ({
         base: '',
         root: './src',
